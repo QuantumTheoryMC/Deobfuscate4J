@@ -9,7 +9,7 @@ public class LauncherInstallation {
     public static void main(String[] args) {
         File deobfMCJson = new File(SetupDirectories.deobfMcVersionFolder, "DeobfMC-1.9.json");
         try {
-            URL packedJson = LauncherInstallation.class.getResource("DeobfMC-1.9.json");
+            URL packedJson = LauncherInstallation.class.getResource("/DeobfMC-1.9.json");
             FileUtils.copyURLToFile(packedJson, deobfMCJson);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
