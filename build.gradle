@@ -17,3 +17,13 @@ afterEvaluate {
     println '                Powered by MCP                   '
     println '#################################################'
 }
+
+task checkMCDir(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "net.pizzacrust.deobfmc.CheckMinecraftDirectory"
+}
+
+task setupDirs(type: JavaExec, dependsOn: 'checkMCDir') {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "net.pizzacrust.deobfmc.SetupDirectories"
+}
