@@ -27,3 +27,8 @@ task setupDirs(type: JavaExec, dependsOn: 'checkMCDir') {
     classpath = sourceSets.main.runtimeClasspath
     main = "net.pizzacrust.deobfmc.SetupDirectories"
 }
+
+task downloadClient(type: JavaExec, dependsOn: 'setupDirs') {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "net.pizzacrust.deobfmc.DownloadClient"
+}
