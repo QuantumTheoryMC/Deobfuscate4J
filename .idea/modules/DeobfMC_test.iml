@@ -11,6 +11,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="DeobfMC_main" />
     <orderEntry type="library" name="Gradle: commons-io:commons-io:2.4" level="project" />
+    <orderEntry type="library" name="Gradle: net.md-5:SpecialSource:1.7.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.ow2.asm:asm-debug-all:5.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: net.sf.jopt-simple:jopt-simple:4.7" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:18.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.sf.opencsv:opencsv:2.3" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="DeobfMC_main" />
 </module>

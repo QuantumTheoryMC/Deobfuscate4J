@@ -9,6 +9,7 @@ repositories {
 
 dependencies {
     compile 'commons-io:commons-io:2.4'
+    compile 'net.md-5:SpecialSource:1.7.3'
 }
 
 afterEvaluate {
@@ -36,4 +37,9 @@ task downloadClient(type: JavaExec, dependsOn: 'setupDirs') {
 task downloadMappings(type: JavaExec, dependsOn: 'downloadClient') {
     classpath = sourceSets.main.runtimeClasspath
     main = "net.pizzacrust.deobfmc.DownloadMappings"
+}
+
+task applySpecialSource(type: JavaExec, dependsOn: 'downloadMappings') {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "net.pizzacrust.deobfmc.ApplySpecialSource"
 }
