@@ -467,18 +467,6 @@
   "mainClass": "net.minecraft.client.main.Main",
   "minimumLauncherVersion": 18,
   "assets": "1.9",
-  "downloads": {
-    "client": {
-      "url": "https://launcher.mojang.com/mc/game/1.9/client/2f67dfe8953299440d1902f9124f0f2c3a2c940f/client.jar",
-      "sha1": "2f67dfe8953299440d1902f9124f0f2c3a2c940f",
-      "size": 8697592
-    },
-    "server": {
-      "url": "https://launcher.mojang.com/mc/game/1.9/server/b4d449cf2918e0f3bd8aa18954b916a4d1880f0d/server.jar",
-      "sha1": "b4d449cf2918e0f3bd8aa18954b916a4d1880f0d",
-      "size": 8848015
-    }
-  },
   "assetIndex": {
     "totalSize": 120051216,
     "id": "1.9",
