@@ -43,3 +43,8 @@ task applySpecialSource(type: JavaExec, dependsOn: 'downloadMappings') {
     classpath = sourceSets.main.runtimeClasspath
     main = "net.pizzacrust.deobfmc.ApplySpecialSource"
 }
+
+task installToLauncher(type: JavaExec, dependsOn: 'applySpecialSource') {
+    classpath = sourceSets.main.runtimeClasspath
+    main = "net.pizzacrust.deobfmc.LauncherInstallation"
+}
