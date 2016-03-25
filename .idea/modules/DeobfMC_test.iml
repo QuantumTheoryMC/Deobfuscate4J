@@ -10,6 +10,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="DeobfMC_main" />
+    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.4" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="DeobfMC_main" />
 </module>
