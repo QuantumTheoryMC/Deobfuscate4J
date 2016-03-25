@@ -33,7 +33,7 @@ task downloadClient(type: JavaExec, dependsOn: 'setupDirs') {
     main = "net.pizzacrust.deobfmc.DownloadClient"
 }
 
-task downloadSrg(type: JavaExec, dependsOn: 'downloadClient') {
+task downloadMappings(type: JavaExec, dependsOn: 'downloadClient') {
     classpath = sourceSets.main.runtimeClasspath
     main = "net.pizzacrust.deobfmc.DownloadMappings"
 }
