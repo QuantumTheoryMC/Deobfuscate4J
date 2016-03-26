@@ -3,7 +3,7 @@ version '1.9-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'maven'
-apply plugin: 'net.pizzacrust.deobfmc.plugin'
+apply plugin: 'deobfmc'
 
 repositories {
     mavenLocal()
