@@ -15,7 +15,7 @@ public class ApplySpecialSource {
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
-        String[] ssArgs = new String[] { "--quiet", "--srg-in", srg.getAbsolutePath(), "--in-jar", deobfMcJar.getAbsolutePath(), "--out-jar", tempJar.getAbsolutePath() };
+        String[] ssArgs = new String[]{"--quiet", "--srg-in", srg.getAbsolutePath(), "--in-jar", deobfMcJar.getAbsolutePath(), "--out-jar", tempJar.getAbsolutePath()};
         try {
             SpecialSource.main(ssArgs);
         } catch (Exception e) {

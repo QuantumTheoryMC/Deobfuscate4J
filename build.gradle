@@ -2,49 +2,27 @@ group 'net.pizzacrust'
 version '1.9-SNAPSHOT'
 
 apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'net.pizzacrust.deobfmc.plugin'
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'net.pizzacrust:DeobfMC:1.9-SNAPSHOT'
+    }
+}
+
 dependencies {
+    compile gradleApi()
     compile 'commons-io:commons-io:2.4'
     compile 'net.md-5:SpecialSource:1.7.3'
-}
-
-afterEvaluate {
-    println '#################################################'
-    println '            DeobfMC 1.9 for Gradle               '
-    println '                Powered by MCP                   '
-    println '#################################################'
-}
-
-task checkMCDir(type: JavaExec) {
-    classpath = sourceSets.main.runtimeClasspath
-    main = "net.pizzacrust.deobfmc.CheckMinecraftDirectory"
-}
-
-task setupDirs(type: JavaExec, dependsOn: 'checkMCDir') {
-    classpath = sourceSets.main.runtimeClasspath
-    main = "net.pizzacrust.deobfmc.SetupDirectories"
-}
-
-task downloadClient(type: JavaExec, dependsOn: 'setupDirs') {
-    classpath = sourceSets.main.runtimeClasspath
-    main = "net.pizzacrust.deobfmc.DownloadClient"
-}
-
-task downloadMappings(type: JavaExec, dependsOn: 'downloadClient') {
-    classpath = sourceSets.main.runtimeClasspath
-    main = "net.pizzacrust.deobfmc.DownloadMappings"
-}
-
-task applySpecialSource(type: JavaExec, dependsOn: 'downloadMappings') {
-    classpath = sourceSets.main.runtimeClasspath
-    main = "net.pizzacrust.deobfmc.ApplySpecialSource"
-}
-
-task installToLauncher(type: JavaExec, dependsOn: 'applySpecialSource') {
-    classpath = sourceSets.main.runtimeClasspath
-    main = "net.pizzacrust.deobfmc.LauncherInstallation"
 }
