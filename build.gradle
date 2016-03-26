@@ -35,6 +35,8 @@ jar {
 
 dependencies {
     compile gradleApi()
+    compile 'commons-io:commons-io:2.4'
+    compile 'net.md-5:SpecialSource:1.7.3'
     shade 'commons-io:commons-io:2.4'
     shade 'net.md-5:SpecialSource:1.7.3'
 }
