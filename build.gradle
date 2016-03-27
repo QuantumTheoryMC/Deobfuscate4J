@@ -1,4 +1,4 @@
-group 'net.pizzacrust'
+group 'qtmc.lib'
 version '1.9-SNAPSHOT'
 
 apply plugin: 'java'
@@ -21,7 +21,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'net.pizzacrust:DeobfMC:1.9-SNAPSHOT'
+        classpath 'qtmc.lib:DeobfMC:1.9-SNAPSHOT'
     }
 }
 
