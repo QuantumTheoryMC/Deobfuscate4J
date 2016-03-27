@@ -2,7 +2,7 @@ package net.pizzacrust.deobfmc.tasks;
 
 import net.md_5.specialsource.SpecialSource;
 import net.pizzacrust.deobfmc.DeobfMCExtension;
-import org.codehaus.plexus.util.FileUtils;
+import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 
