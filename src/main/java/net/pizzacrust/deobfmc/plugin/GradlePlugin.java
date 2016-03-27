@@ -1,5 +1,6 @@
 package net.pizzacrust.deobfmc.plugin;
 
+import net.pizzacrust.deobfmc.DeobfMCExtension;
 import net.pizzacrust.deobfmc.tasks.ApplySpecialSourceTask;
 import net.pizzacrust.deobfmc.tasks.CheckDestinationTask;
 import net.pizzacrust.deobfmc.tasks.DownloadClientTask;
@@ -21,6 +22,7 @@ public class GradlePlugin implements Plugin<Project> {
                 println("#################################################");
             }
         });
+        project.getExtensions().add("deobfmc", DeobfMCExtension.class);
         project.getTasks().create("checkDestination", CheckDestinationTask.class);
         project.getTasks().create("downloadClient", DownloadClientTask.class);
         project.getTasks().create("downloadMappings", DownloadMappingTask.class);
