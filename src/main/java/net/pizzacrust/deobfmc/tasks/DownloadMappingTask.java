@@ -16,7 +16,7 @@ public class DownloadMappingTask extends DefaultTask {
             DeobfMCExtension extension = getProject().getExtensions().getByType(DeobfMCExtension.class);
             if (extension.getSrgLocation() == null) {
                 mappings = new File(CheckDestinationTask.destination, "client.srg");
-                URL url = new URL(extension.getDownloadInJar());
+                URL url = new URL(extension.getDownloadSrgLocation());
                 FileUtils.copyURLToFile(url, mappings);
                 return;
             }
