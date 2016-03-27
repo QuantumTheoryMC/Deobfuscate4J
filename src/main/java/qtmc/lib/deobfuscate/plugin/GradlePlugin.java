@@ -16,7 +16,7 @@ public class GradlePlugin implements Plugin<Project> {
             @Override
             public void execute(Project project) {
                 println("#################################################");
-                println("         Reobfuscate4J 1.9 for Gradle            ");
+                println("         Deobfuscate4J 1.9 for Gradle            ");
                 println("          Powered by QuantumTheoryMC             ");
                 println("#################################################");
             }
