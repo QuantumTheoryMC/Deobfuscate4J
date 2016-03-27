@@ -1,6 +1,6 @@
-package net.pizzacrust.deobfmc.tasks;
+package qtmc.lib.deobfuscate.tasks;
 
-import net.pizzacrust.deobfmc.DeobfMCExtension;
+import qtmc.lib.deobfuscate.DeobfMCExtension;
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;

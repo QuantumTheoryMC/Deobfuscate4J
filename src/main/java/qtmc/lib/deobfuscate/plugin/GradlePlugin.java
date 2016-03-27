@@ -1,10 +1,10 @@
-package net.pizzacrust.deobfmc.plugin;
+package qtmc.lib.deobfuscate.plugin;
 
-import net.pizzacrust.deobfmc.DeobfMCExtension;
-import net.pizzacrust.deobfmc.tasks.ApplySpecialSourceTask;
-import net.pizzacrust.deobfmc.tasks.CheckDestinationTask;
-import net.pizzacrust.deobfmc.tasks.DownloadClientTask;
-import net.pizzacrust.deobfmc.tasks.DownloadMappingTask;
+import qtmc.lib.deobfuscate.DeobfMCExtension;
+import qtmc.lib.deobfuscate.tasks.ApplySpecialSourceTask;
+import qtmc.lib.deobfuscate.tasks.CheckDestinationTask;
+import qtmc.lib.deobfuscate.tasks.DownloadClientTask;
+import qtmc.lib.deobfuscate.tasks.DownloadMappingTask;
 import org.gradle.api.Action;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;

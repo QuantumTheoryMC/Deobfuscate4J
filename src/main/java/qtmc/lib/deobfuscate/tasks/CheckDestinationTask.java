@@ -1,4 +1,4 @@
-package net.pizzacrust.deobfmc.tasks;
+package qtmc.lib.deobfuscate.tasks;
 
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;

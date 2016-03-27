@@ -1,4 +1,4 @@
-package net.pizzacrust.deobfmc;
+package qtmc.lib.deobfuscate;
 
 public class DeobfMCExtension {
     private String srgLocation = null; // relative, file
