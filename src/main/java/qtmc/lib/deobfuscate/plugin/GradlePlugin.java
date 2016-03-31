@@ -1,10 +1,7 @@
 package qtmc.lib.deobfuscate.plugin;
 
 import qtmc.lib.deobfuscate.DeobfMCExtension;
-import qtmc.lib.deobfuscate.tasks.ApplySpecialSourceTask;
-import qtmc.lib.deobfuscate.tasks.CheckDestinationTask;
-import qtmc.lib.deobfuscate.tasks.DownloadClientTask;
-import qtmc.lib.deobfuscate.tasks.DownloadMappingTask;
+import qtmc.lib.deobfuscate.tasks.*;
 import org.gradle.api.Action;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
@@ -26,6 +23,7 @@ public class GradlePlugin implements Plugin<Project> {
         project.getTasks().create("downloadClient", DownloadClientTask.class);
         project.getTasks().create("downloadMappings", DownloadMappingTask.class);
         project.getTasks().create("applySpecialSource", ApplySpecialSourceTask.class);
+        project.getTasks().create("reverseSpecialSource", ReverseSpecialSource.class);
     }
 
     private void println(String msg) {
