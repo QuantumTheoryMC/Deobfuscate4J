@@ -24,6 +24,7 @@ public class GradlePlugin implements Plugin<Project> {
         project.getTasks().create("downloadMappings", DownloadMappingTask.class);
         project.getTasks().create("applySpecialSource", ApplySpecialSourceTask.class);
         project.getTasks().create("reverseSpecialSource", ReverseSpecialSource.class);
+        project.getTasks().create("setupContributionWorkspace", SetupContributionWorkspace.class);
     }
 
     private void println(String msg) {
