@@ -1,6 +1,6 @@
 package qtmc.lib.deobfuscate.plugin;
 
-import qtmc.lib.deobfuscate.DeobfMCExtension;
+import qtmc.lib.deobfuscate.DeobfuscateExtension;
 import qtmc.lib.deobfuscate.tasks.*;
 import org.gradle.api.Action;
 import org.gradle.api.Plugin;
@@ -18,7 +18,7 @@ public class GradlePlugin implements Plugin<Project> {
                 println("#################################################");
             }
         });
-        project.getExtensions().add("deobfmc", DeobfMCExtension.class);
+        project.getExtensions().add("deobfuscate", DeobfuscateExtension.class);
         project.getTasks().create("checkDestination", CheckDestinationTask.class);
         project.getTasks().create("downloadClient", DownloadClientTask.class);
         project.getTasks().create("downloadMappings", DownloadMappingTask.class);

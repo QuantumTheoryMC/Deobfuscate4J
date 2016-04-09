@@ -1,6 +1,6 @@
 package qtmc.lib.deobfuscate.tasks;
 
-import qtmc.lib.deobfuscate.DeobfMCExtension;
+import qtmc.lib.deobfuscate.DeobfuscateExtension;
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
@@ -13,7 +13,7 @@ public class DownloadClientTask extends DefaultTask {
     @TaskAction
     public void doTask() {
         try {
-            DeobfMCExtension extension = getProject().getExtensions().getByType(DeobfMCExtension.class);
+            DeobfuscateExtension extension = getProject().getExtensions().getByType(DeobfuscateExtension.class);
             if (extension.getInJar() == null) {
                 clientJar = new File(CheckDestinationTask.destination, "client.jar");
                 URL url = new URL(extension.getDownloadInJar());

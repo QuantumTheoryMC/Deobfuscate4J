@@ -1,7 +1,7 @@
 package qtmc.lib.deobfuscate.tasks;
 
 import net.md_5.specialsource.SpecialSource;
-import qtmc.lib.deobfuscate.DeobfMCExtension;
+import qtmc.lib.deobfuscate.DeobfuscateExtension;
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
@@ -15,7 +15,7 @@ public class ApplySpecialSourceTask extends DefaultTask {
 
     @TaskAction
     public void doTask() {
-        File finalJar = new File(CheckDestinationTask.destination, getProject().getExtensions().getByType(DeobfMCExtension.class).getOutJarName());
+        File finalJar = new File(CheckDestinationTask.destination, getProject().getExtensions().getByType(DeobfuscateExtension.class).getOutJarName());
         try {
             FileUtils.copyFile(DownloadClientTask.clientJar, finalJar);
             String[] args = new String[] { "--quiet", "--srg-in", DownloadMappingTask.mappings.getAbsolutePath(), "--in-jar", DownloadClientTask.clientJar.getAbsolutePath(), "--out-jar", finalJar.getAbsolutePath()};

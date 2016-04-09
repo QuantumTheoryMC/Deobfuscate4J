@@ -1,6 +1,6 @@
 package qtmc.lib.deobfuscate;
 
-public class DeobfMCExtension {
+public class DeobfuscateExtension {
     private String srgLocation = null; // relative, file
     private String inJar = null; // relative, file
     private String outJarName = null; // relative, string

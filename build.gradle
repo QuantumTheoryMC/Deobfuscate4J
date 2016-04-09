@@ -25,7 +25,7 @@ buildscript {
     }
 }
 
-deobfmc {
+deobfuscate {
     downloadSrgLocation = 'https://raw.githubusercontent.com/ProjectTestificate/MinecraftMappings/master/1.8.8/obf2mcp.srg'
     downloadInJar = 'https://launcher.mojang.com/mc/game/1.8.8/client/0983f08be6a4e624f5d85689d1aca869ed99c738/client.jar'
     outJarName = 'DeobfMC-1.8.8.jar'

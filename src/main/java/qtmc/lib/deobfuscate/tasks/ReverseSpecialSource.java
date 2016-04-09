@@ -4,14 +4,14 @@ import net.md_5.specialsource.SpecialSource;
 import org.apache.commons.io.FileUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
-import qtmc.lib.deobfuscate.DeobfMCExtension;
+import qtmc.lib.deobfuscate.DeobfuscateExtension;
 
 import java.io.File;
 
 public class ReverseSpecialSource extends DefaultTask {
     @TaskAction
     public void doTask() {
-        File finalJar = new File(CheckDestinationTask.destination, getProject().getExtensions().getByType(DeobfMCExtension.class).getOutJarName());
+        File finalJar = new File(CheckDestinationTask.destination, getProject().getExtensions().getByType(DeobfuscateExtension.class).getOutJarName());
         if (!finalJar.exists()) {
             throw new RuntimeException("SpecialSource hasn't been applied yet!");
         } else {
